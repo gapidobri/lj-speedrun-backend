@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "traffic_lights",
+  "info": {
+    "singularName": "traffic-light",
+    "pluralName": "traffic-lights",
+    "displayName": "Traffic Light",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 20,
+      "default": "Semafor"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location",
+      "required": true
+    },
+    "captureTime": {
+      "type": "time",
+      "required": true
+    },
+    "interval": {
+      "type": "integer",
+      "required": true,
+      "default": 120,
+      "min": 1
+    },
+    "seconds": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "greenLength": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    }
+  }
+}
