@@ -7,7 +7,7 @@ ENV NODE_ENV=production
 COPY package.json ./
 COPY yarn.lock ./
 
-RUN yarn
+RUN yarn install --network-timeout 1000000
 
 COPY . .
 
