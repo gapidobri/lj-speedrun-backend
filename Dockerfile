@@ -7,12 +7,12 @@ ENV NODE_ENV=production
 COPY package.json ./
 COPY yarn.lock ./
 
-RUN yarn
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 EXPOSE 1337
 
-ENTRYPOINT [ "yarn", "start" ]
+ENTRYPOINT [ "npm", "start" ]
