@@ -65,10 +65,10 @@ jobs:
 
       - name: Setup QEMU
         id: qemu
-          uses: docker/setup-qemu-action@v1
-          with:
-            image: tonistiigi/binfmt:latest
-            platforms: arm64
+        uses: docker/setup-qemu-action@v1
+        with:
+          image: tonistiigi/binfmt:latest
+          platforms: arm64
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
