@@ -1,15 +1,6 @@
 version: '3.9'
 
 services:
-  app:
-    build: .
-    ports:
-      - 1337:1337
-    env_file: .env
-    environment:
-      DATABASE_HOST: db
-      DATABASE_PASSWORD: rNyuWJxjKv2Bntnus2muVHTFzsPjp
-
   db:
     image: postgres:latest
     volumes:
@@ -18,6 +9,8 @@ services:
       POSTGRES_DB: strapi
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: rNyuWJxjKv2Bntnus2muVHTFzsPjp
+    ports:
+      - 5432:5432
 
 volumes:
   db:
